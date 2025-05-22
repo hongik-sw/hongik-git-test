@@ -71,7 +71,7 @@ pipeline {
             emailext(
                         subject: 'Build success',
                         to: 'kge3818@gmail.com',
-                        from: 'gjj0518@naver.com',
+                        from: 'kong010518@gmail.com',
                         body: 'congratulation!',
             )
             echo "Build and test successed!"
