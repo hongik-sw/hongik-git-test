@@ -74,7 +74,6 @@ pipeline {
                         to: 'kge3818@gmail.com',
                         from: 'gjj0518@naver.com',
                         body: 'congratulation!',
-                        contentType: 'text/html'
                     )
         }
     }
