@@ -73,7 +73,7 @@ pipeline {
                         subject: 'Build success',
                         to: 'kge3818@gmail.com',
                         from: 'gjj0518@naver.com',
-                        body: 'congratulation!,
+                        body: 'congratulation!',
                         contentType: 'text/html'
                     )
         }
