@@ -68,7 +68,14 @@ pipeline {
         }
 
         success {
-            echo "Build and test succeeded!"
+            echo "Build and test successed!"
+            emailext(
+                        subject: 'Build success',
+                        to: 'lim063033@gmail.com',
+                        from: 'gjj0518@naver.com',
+                        body: 'congratulation!,
+                        contentType: 'text/html'
+                    )
         }
     }
 }
