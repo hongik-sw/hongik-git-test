@@ -70,9 +70,9 @@ pipeline {
         success {
             emailext(
                         subject: 'Build success',
-                        to: 'kge3818@gmail.com',
-                        from: 'kge3818@gmail.com',
+                        to: 'hohoyes2005@gmail.com',
                         body: 'congratulation!',
+                        attachmentsPattern: 'test-reports/test-output.txt'
             )
             echo "Build and test successed!"
 
