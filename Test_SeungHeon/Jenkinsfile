@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh '''
                     echo "[+] Compiling source files..."
-                    cd Test1
+                    cd Test_SeungHeon
                     find src -name "*.java" > sources.txt
                     javac -encoding UTF-8 -d ../${CLASS_DIR} -cp ../${JUNIT_JAR_PATH} @sources.txt
                 '''
@@ -68,14 +68,10 @@ pipeline {
         }
 
         success {
-            emailext(
-                        subject: 'Build success',
-                        to: 'kge3818@gmail.com',
-                        from: 'kge3818@gmail.com',
-                        body: 'congratulation!',
-            )
-            echo "Build and test successed!"
-
+            echo "Build and test succeeded!"
+            mail to: '2shoneycom@gmail.com',
+                subject: "SUCCESS: Job '${env.JOB_NAME} [#${env.BUILD_NUMBER}]'",
+                body: "Build completed successfully!\n\nCheck console output at ${env.BUILD_URL}."
         }
     }
 }
