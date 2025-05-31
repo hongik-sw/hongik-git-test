@@ -74,7 +74,7 @@ pipeline {
                         subject: 'Build success',
                         to: 'hohoyes2005@gmail.com',
                         body: 'congratulation!',
-                        attachmentsPattern: 'test-reports/test-output.txt'
+                      
             )
             echo "Build and test successed!"
 
